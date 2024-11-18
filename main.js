@@ -18,3 +18,8 @@ let currencyRaio={
       unit: "동"
     }
 };
+
+document.querySelectorAll("#from-currency-list a")
+    .forEach(menu=>menu.addEventListener("click", function (){
+        
+    }));
