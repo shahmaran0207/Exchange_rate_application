@@ -24,15 +24,29 @@ let toCurrency="USD";
 
 document.querySelectorAll("#from-currency-list a")
     .forEach(menu=>menu.addEventListener("click", function (){
-        document.getElementById("from-button").textContent=this.textContent;
+        document.getElementById("to-button").textContent=this.textContent;
+
+        let money = document.getElementById("result");
+        let count = document.getElementById("to-button").textContent;
+
+        if (count === "USD") {
+            money.textContent = "달러";
+        }
+        if (count === "KRW") {
+            money.textContent = "원";
+        }
+        if (count === "VND") {
+            money.textContent = "동";
+        }
 
         fromCurrency=this.textContent;
     }
 ));
 
-document.querySelectorAll("#to-currency-list").forEach(menu=>menu.addEventListener("click",function (){
-    document.getElementById("to-button").textContent=this.textContent;
+function convert(){
+    let amount = document.getElementById("from-input").value;
+    let convertedAmount = amount * currencyRaio[toCurrency][fromCurrency];
+    console.log(amount);
 
-    toCurrency=this.textContent;
-    }
-));
+    document.getElementById("to-input").value=convertedAmount;
+}
