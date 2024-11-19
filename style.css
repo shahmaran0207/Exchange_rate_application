@@ -1,0 +1,127 @@
+
+/* Reset and Base Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #4CAF50;
+}
+
+p {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.exchange-box {
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #f9f9f9;
+}
+
+.dropdown {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    padding: 10px 16px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.input-area {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-area input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box; /* 추가: 패딩과 경계선을 포함하여 박스 크기 조정 */
+}
+
+
+.input-area div {
+    text-align: right;
+    font-size: 0.9em;
+    color: #4CAF50;
+}
+
+.divider {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #4CAF50;
+}
+
+#result {
+    text-align: right;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+}
+
+input[disabled] {
+    background-color: #e9e9e9;
+}

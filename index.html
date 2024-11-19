@@ -4,67 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .exchange-box{
-            border: 1px solid black;
-            width: 400px;
-        }
-
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .dropdown {
-            position: relative;
-            display: inline-block;
-            width:100%;
-        }
-
-        .dropdown-content {
-            display: none;
-            width: 100%;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            width: 100%;
-        }
-
-        .dropdown-content a:hover {background-color: #f1f1f1}
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: #3e8e41;
-        }
-
-        .input-area{
-            width:100%;
-        }
-
-        .input-area input{
-            width:100%;
-        }
-    </style>
-
 </head>
 <body>
+<div class="container">
+    <h1>Currency Converter</h1>
+    <p>Convert your currency easily and quickly!</p>
 
     <div class="exchange-box">
         <div class="dropdown">
@@ -77,26 +21,30 @@
         </div>
 
         <div class="input-area">
-            <input type="number" id="from-input" onkeyup="convert()"/>
+            <input type="number" id="from-input" placeholder="Enter amount" onkeyup="convert()" />
             <div>달러</div>
         </div>
     </div>
 
-    <h1>=</h1>
+    <div class="divider">=</div>
 
     <div class="exchange-box">
         <div class="dropdown">
             <button class="dropbtn" id="to-button">USD</button>
             <div class="dropdown-content" id="to-currency-list">
+                <a href="#">USD</a>
+                <a href="#">KRW</a>
+                <a href="#">VND</a>
             </div>
         </div>
 
         <div class="input-area">
-            <input type="number" id="to-input"/>
+            <input type="number" id="to-input" placeholder="Converted amount" disabled readonly />
             <div id="result">달러</div>
         </div>
     </div>
+</div>
 
-    <script src="main.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
